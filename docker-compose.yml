@@ -1,0 +1,45 @@
+version: '3.9'
+services:
+  # Название сервиса (можно называть как угодно). Если не используется параметр "container_name", то контейнер будет создан с именем названия сервиса.
+  db:
+    # Собрать образ с помощью файла Dockerfile
+    build: ./sql
+    # Имя образа который будет создан
+    image: db-img-finvers
+    # Имя контейнера
+    container_name: mysql-cont-finvers
+    # Презапускаться при возникновении ошибок
+    restart: "always"
+    # Переменные окружения
+    environment:
+      MYSQL_ROOT_PASSWORD: 123
+    # Первый порт не должен повторяться если сервисов несколько, (второй порт может).
+    ports:
+      - "3308:3306"
+    # Проверка работоспособности сервиса
+    healthcheck:
+        test: "/usr/bin/mysql --user=root --password=123 --execute \"SHOW DATABASES;\""
+        interval: 2s
+        timeout: 20s
+        retries: 10
+
+  nodejs:
+    # Собрать образ с помощью файла Dockerfile
+    build: ./nodejs_app
+    # Имя образа который будет создан
+    image: nodejs-server-img-finvers
+    # Имя контейнера
+    container_name: nodejs-server-cont-finvers
+    # Презапускаться при возникновении ошибок
+    restart: "always"
+    # Порты: 1 - порт хоста (localhost:8000), 2 - порт контейнера
+    ports:
+      - "8000:8080"
+      # "127.0.0.1:8000:8080" - более безопасный вариант чем 8000:8080
+    # Маунтим папку хоста nodejs_app в контейнер (для возможности корректировки кода)
+    volumes:
+      - ./nodejs_app:/my_app
+    # Собираем и запускаем контейнер nodejs после db, на момент запуска nodejs, db должен успешно пройти проверку healthcheck
+    depends_on:
+      db:
+        condition: service_healthy

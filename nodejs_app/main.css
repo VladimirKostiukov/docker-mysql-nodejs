@@ -1,0 +1,24 @@
+table {
+    border-collapse: collapse;
+    /*убираем пустые промежутки между ячейками*/
+    border: 1px solid silver;
+    /*устанавливаем для таблицы внешнюю границу серого цвета толщиной 1px*/
+    font-size: 18px;
+    font-family: Roboto, Verdana, Geneva, Tahoma, sans-serif;
+    width: 25%;
+}
+
+td, th {
+    border: 1px solid silver;
+    padding: 10px 15px;
+}
+
+/* Нечетные строки */
+table tbody tr:nth-child(odd) {
+    background: #F7F7F7;
+}
+
+/* Четные строки */
+table tbody tr:nth-child(even) {
+    background: #fff;
+}
