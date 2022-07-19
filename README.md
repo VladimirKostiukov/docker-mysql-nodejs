@@ -43,7 +43,7 @@ init_connect ='SET NAMES utf8mb4'<br />
 character-set-server = utf8mb4<br />
 collation-server = utf8mb4_unicode_ci<br />
 <h2>Как запустить проект</h2>
-<p>Перед запуском проекта на ПК должен быть предварительно установлен Docker.</p>
+<p>Перед запуском проекта на ПК должен быть предварительно установлен Docker Desktop.</p>
 <ol>
 <li>Скачать проект в рабочий каталог git clone https://github.com/VladimirKostiukov/docker-mysql-nodejs.git</li>
 <li>Запустить Docker Desktop</li>
