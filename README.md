@@ -57,7 +57,7 @@ collation-server = utf8mb4_unicode_ci<br />
 <li>С помощью консоли (терминала) перейти в каталог проекта docker-mysql-nodejs (где расположен файл docker-compose.yml).</li>
 <li>В командной строке выполнить <cpan style="color: green;">"docker-compose up"</cpan>.</li>
 <li>Подождать пока Docker создаст образы и запустит контейнеры.</li>
-<li>Признаком успешного окончания сборки и запуска является наличие в консоли последних двух строк следующего вида: &laquo;Server started on port 8080&raquo; и &laquo;Connection to MySQL server successfully&raquo;.</li>
+<li>Признаком успешного окончания сборки и запуска является наличие в консоли последней строки следующего вида: &laquo;Просмотр результата по адресу: http://localhost:8000/users.html&raquo;.</li>
 <li>Скопировать адрес http://localhost:8000/users.html в адресную строку браузера и нажать ENTER.</li>
 <li>В окне браузера отобразится список имен и фамилий.</li>
 </ol>
