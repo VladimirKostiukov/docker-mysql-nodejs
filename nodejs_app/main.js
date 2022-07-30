@@ -47,6 +47,7 @@ connection.connect(function (err) {
         return console.error("Error connecting to MySQL server: " + err.message);
     } else {
         console.log("Connection to MySQL server successfully");
+        console.log("Просмотр результата по адресу: http://localhost:8000/users.html");
     }
 });
 
