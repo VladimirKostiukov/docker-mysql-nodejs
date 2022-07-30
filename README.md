@@ -52,7 +52,7 @@ collation-server = utf8mb4_unicode_ci<br />
 <h2>Как запустить проект</h2>
 <p>Перед запуском проекта на ПК должен быть предварительно установлен Docker Desktop.</p>
 <ol>
-<li>Скачать проект в рабочий каталог git clone https://github.com/VladimirKostiukov/docker-mysql-nodejs.git.</li>
+<li>Скачать проект в рабочий каталог "git clone https://github.com/VladimirKostiukov/docker-mysql-nodejs.git -b read-data-in-real-time"</li>
 <li>Запустить Docker Desktop.</li>
 <li>С помощью консоли (терминала) перейти в каталог проекта docker-mysql-nodejs (где расположен файл docker-compose.yml).</li>
 <li>В командной строке выполнить <cpan style="color: green;">docker-compose up</cpan>.</li>
