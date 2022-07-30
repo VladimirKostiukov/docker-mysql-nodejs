@@ -1,10 +1,14 @@
+body {
+    font-family: Roboto, Verdana, Geneva, Tahoma, sans-serif;
+    /* background-color: #fafafa; */
+}
 table {
     border-collapse: collapse;
     /*убираем пустые промежутки между ячейками*/
     border: 1px solid silver;
     /*устанавливаем для таблицы внешнюю границу серого цвета толщиной 1px*/
     font-size: 18px;
-    font-family: Roboto, Verdana, Geneva, Tahoma, sans-serif;
+    /* font-family: Roboto, Verdana, Geneva, Tahoma, sans-serif; */
     width: 25%;
 }
 
@@ -21,4 +25,19 @@ table tbody tr:nth-child(odd) {
 /* Четные строки */
 table tbody tr:nth-child(even) {
     background: #fff;
+}
+
+.center {
+    text-align: center;
+}
+
+.copy {
+    background-color: #eee;
+    text-align: center;
+    padding: 5px;
+}
+
+.header {
+    background-color: #eee;
+    padding: 5px;
 }
