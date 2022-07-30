@@ -55,7 +55,7 @@ collation-server = utf8mb4_unicode_ci<br />
 <li>Скачать проект в рабочий каталог "git clone https://github.com/VladimirKostiukov/docker-mysql-nodejs.git -b read-data-in-real-time"</li>
 <li>Запустить Docker Desktop.</li>
 <li>С помощью консоли (терминала) перейти в каталог проекта docker-mysql-nodejs (где расположен файл docker-compose.yml).</li>
-<li>В командной строке выполнить <cpan style="color: green;">docker-compose up</cpan>.</li>
+<li>В командной строке выполнить <cpan style="color: green;">"docker-compose up"</cpan>.</li>
 <li>Подождать пока Docker создаст образы и запустит контейнеры.</li>
 <li>Признаком успешного окончания сборки и запуска является наличие в консоли последних двух строк следующего вида: &laquo;Server started on port 8080&raquo; и &laquo;Connection to MySQL server successfully&raquo;.</li>
 <li>Скопировать адрес http://localhost:8000/users.html в адресную строку браузера и нажать ENTER.</li>
